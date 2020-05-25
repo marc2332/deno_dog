@@ -17,12 +17,12 @@ export const getAllBreeds = async (): Promise<Array<string>>  => {
   return fetchByEndpoint(BREEDS_ENDPOINT);
 };
 
-export const getAllDogsByBreed = async (breed: string): Promise<Array<string>>  => {
+export const getAllDogsOfBreed = async (breed: string): Promise<Array<string>>  => {
   return fetchByEndpoint(`${BY_BREED_ENDPOINT}${breed}/images`);
 };
 
-export const getADogByBreed = async (breed: string): Promise<string>  => {
-  const allDogs: Array<string> = await getAllDogsByBreed(breed);
+export const getADogOfBreed = async (breed: string): Promise<string>  => {
+  const allDogs: Array<string> = await getAllDogsOfBreed(breed);
   return allDogs[Math.floor(Math.random() * allDogs.length)];
 };
 

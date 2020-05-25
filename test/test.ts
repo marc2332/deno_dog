@@ -1,7 +1,7 @@
 import {
   getAllBreeds,
-  getAllDogsByBreed,
-  getADogByBreed,
+  getAllDogsOfBreed,
+  getADogOfBreed,
   getADog,
   getSubBreedsOf,
 } from "../mod.ts";
@@ -12,13 +12,13 @@ Deno.test("getAllBreeds", async () => {
   equal(Array.isArray(allBreeds), true);
 });
 
-Deno.test("getAllDogsByBreed", async () => {
-  const allDogs = await getAllDogsByBreed("retriever")
+Deno.test("getAllDogsOfBreed", async () => {
+  const allDogs = await getAllDogsOfBreed("retriever")
   equal(Array.isArray(allDogs), true);
 });
 
-Deno.test("getADogByBreed", async () => {
-  const theDog = await getADogByBreed("retriever")
+Deno.test("getADogOfBreed", async () => {
+  const theDog = await getADogOfBreed("retriever")
   assertStrContains(theDog, "/images.dog.ceo");
 });
 
