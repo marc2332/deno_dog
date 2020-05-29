@@ -9,7 +9,7 @@ import {
   getADogOfBreed,
   getADog,
   getSubBreedsOf,
-} from "https://raw.githubusercontent.com/marc2332/deno_dog/master/mod.ts";
+} from "https://deno.land/x/dog/mod.ts";
 
 console.log(await getAllBreeds()); 
 // List all available breeds
